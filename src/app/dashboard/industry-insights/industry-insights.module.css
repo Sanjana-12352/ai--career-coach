@@ -1,0 +1,331 @@
+/* src/app/dashboard/industry-insights/industry-insights.module.css */
+.container {
+  min-height: 100vh;
+  background: #000000;
+}
+
+.header {
+  background: linear-gradient(135deg, #111111 0%, #1a1a1a 100%);
+  border-bottom: 1px solid #1f2937;
+  padding: 2rem;
+}
+
+.backButton {
+  display: inline-block;
+  color: #9ca3af;
+  text-decoration: none;
+  margin-bottom: 1rem;
+  transition: color 0.3s ease;
+}
+
+.backButton:hover {
+  color: #667eea;
+}
+
+.title {
+  font-size: 2rem;
+  font-weight: 800;
+  color: white;
+  margin: 0 0 0.5rem 0;
+}
+
+.subtitle {
+  color: #9ca3af;
+  margin: 0;
+  font-size: 1.125rem;
+}
+
+.content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 3rem 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+/* Selector */
+.selectorCard {
+  background: linear-gradient(135deg, #111111 0%, #1a1a1a 100%);
+  border: 1px solid #1f2937;
+  border-radius: 1rem;
+  padding: 2rem;
+}
+
+.selectorLabel {
+  display: block;
+  font-weight: 600;
+  color: white;
+  margin-bottom: 1rem;
+  font-size: 1.125rem;
+}
+
+.select {
+  width: 100%;
+  padding: 1rem;
+  background: #1f2937;
+  border: 2px solid #374151;
+  border-radius: 0.75rem;
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: border-color 0.3s ease;
+}
+
+.select:focus {
+  outline: none;
+  border-color: #667eea;
+}
+
+/* Loading */
+.loadingCard {
+  background: linear-gradient(135deg, #111111 0%, #1a1a1a 100%);
+  border: 1px solid #1f2937;
+  border-radius: 1rem;
+  padding: 4rem 2rem;
+  text-align: center;
+  color: #9ca3af;
+}
+
+.spinner {
+  width: 50px;
+  height: 50px;
+  border: 4px solid #1f2937;
+  border-top-color: #667eea;
+  border-radius: 50%;
+  margin: 0 auto 1rem auto;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+/* Cards */
+.card,
+.overviewCard {
+  background: linear-gradient(135deg, #111111 0%, #1a1a1a 100%);
+  border: 1px solid #1f2937;
+  border-radius: 1rem;
+  padding: 2rem;
+}
+
+.cardTitle {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: white;
+  margin: 0 0 1.5rem 0;
+}
+
+/* Overview */
+.overviewText {
+  color: #d1d5db;
+  line-height: 1.7;
+  margin-bottom: 1.5rem;
+  font-size: 1.05rem;
+}
+
+.growthBadge {
+  display: inline-flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem 1.5rem;
+  background: #1f2937;
+  border-radius: 0.75rem;
+}
+
+.growthLabel {
+  color: #9ca3af;
+  font-weight: 600;
+}
+
+.growthValue {
+  font-size: 1.5rem;
+  font-weight: 800;
+}
+
+.growthValue.positive {
+  color: #10b981;
+}
+
+.growthValue.negative {
+  color: #ef4444;
+}
+
+/* Salary Grid */
+.salaryGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+}
+
+.salaryCard {
+  background: #1f2937;
+  padding: 1.5rem;
+  border-radius: 0.75rem;
+  text-align: center;
+  border: 1px solid #374151;
+  transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.salaryCard:hover {
+  transform: translateY(-5px);
+  border-color: #667eea;
+}
+
+.salaryLevel {
+  color: #9ca3af;
+  font-size: 0.9rem;
+  margin-bottom: 0.75rem;
+}
+
+.salaryAmount {
+  color: white;
+  font-size: 1.75rem;
+  font-weight: 800;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Skills */
+.skillsList {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.skillItem {
+  background: #1f2937;
+  padding: 1.5rem;
+  border-radius: 0.75rem;
+  border: 1px solid #374151;
+}
+
+.skillHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.75rem;
+}
+
+.skillName {
+  color: white;
+  font-weight: 600;
+  font-size: 1.05rem;
+}
+
+.skillDemand {
+  color: #667eea;
+  font-weight: 700;
+}
+
+.skillBar {
+  width: 100%;
+  height: 10px;
+  background: #374151;
+  border-radius: 1rem;
+  overflow: hidden;
+}
+
+.skillBarFill {
+  height: 100%;
+  background: linear-gradient(90deg, #667eea 0%, #764ba2 100%);
+  border-radius: 1rem;
+  transition: width 0.5s ease;
+}
+
+/* Roles */
+.rolesGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+}
+
+.roleCard {
+  background: #1f2937;
+  padding: 1.5rem;
+  border-radius: 0.75rem;
+  border: 1px solid #374151;
+  transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.roleCard:hover {
+  transform: translateY(-5px);
+  border-color: #667eea;
+}
+
+.roleTitle {
+  color: white;
+  font-weight: 700;
+  font-size: 1.125rem;
+  margin-bottom: 0.75rem;
+}
+
+.roleGrowth {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #10b981;
+  font-weight: 600;
+}
+
+.growthIcon {
+  font-size: 1.25rem;
+}
+
+/* Lists */
+.trendsList,
+.challengesList,
+.opportunitiesList {
+  margin: 0;
+  padding-left: 1.5rem;
+  color: #d1d5db;
+  line-height: 1.8;
+}
+
+.trendsList li,
+.challengesList li,
+.opportunitiesList li {
+  margin-bottom: 0.75rem;
+}
+
+.challengesList {
+  color: #fca5a5;
+}
+
+.opportunitiesList {
+  color: #86efac;
+}
+
+/* Two Column Grid */
+.twoColumnGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 2rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .content {
+    padding: 2rem 1rem;
+  }
+
+  .salaryGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .rolesGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .twoColumnGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .card,
+  .overviewCard {
+    padding: 1.5rem;
+  }
+}

@@ -1,0 +1,300 @@
+/* src/app/dashboard/interview-prep/interview-prep.module.css */
+.container {
+  min-height: 100vh;
+  background: #000000;
+}
+
+.header {
+  background: linear-gradient(135deg, #111111 0%, #1a1a1a 100%);
+  border-bottom: 1px solid #1f2937;
+  padding: 2rem;
+}
+
+.backButton {
+  display: inline-block;
+  color: #9ca3af;
+  text-decoration: none;
+  margin-bottom: 1rem;
+  transition: color 0.3s ease;
+}
+
+.backButton:hover {
+  color: #667eea;
+}
+
+.title {
+  font-size: 2rem;
+  font-weight: 800;
+  color: white;
+  margin: 0 0 0.5rem 0;
+}
+
+.subtitle {
+  color: #9ca3af;
+  margin: 0;
+  font-size: 1.125rem;
+}
+
+.content {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 3rem 2rem;
+}
+
+/* Setup Card */
+.setupCard,
+.practiceCard,
+.feedbackCard,
+.completeCard {
+  background: linear-gradient(135deg, #111111 0%, #1a1a1a 100%);
+  border: 1px solid #1f2937;
+  border-radius: 1.5rem;
+  padding: 3rem;
+}
+
+.cardTitle {
+  font-size: 1.75rem;
+  font-weight: 800;
+  color: white;
+  margin: 0 0 2rem 0;
+  text-align: center;
+}
+
+.formGroup {
+  margin-bottom: 2rem;
+}
+
+.formGroup label {
+  display: block;
+  font-weight: 600;
+  color: white;
+  margin-bottom: 1rem;
+  font-size: 1.125rem;
+}
+
+.select {
+  width: 100%;
+  padding: 1rem;
+  background: #1f2937;
+  border: 2px solid #374151;
+  border-radius: 0.75rem;
+  color: white;
+  font-size: 1rem;
+}
+
+.buttonGroup {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 1rem;
+}
+
+.optionButton {
+  padding: 1rem;
+  background: #1f2937;
+  border: 2px solid #374151;
+  border-radius: 0.75rem;
+  color: #9ca3af;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.optionButton:hover {
+  border-color: #667eea;
+}
+
+.optionButton.selected {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-color: #667eea;
+  color: white;
+}
+
+.primaryButton {
+  width: 100%;
+  padding: 1.25rem 2rem;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border: none;
+  border-radius: 0.75rem;
+  color: white;
+  font-weight: 700;
+  font-size: 1.125rem;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  margin-top: 2rem;
+}
+
+.primaryButton:hover:not(:disabled) {
+  transform: translateY(-2px);
+}
+
+.primaryButton:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* Practice */
+.progress {
+  text-align: center;
+  color: #9ca3af;
+  margin-bottom: 2rem;
+  font-size: 1.125rem;
+}
+
+.questionCard {
+  background: #1f2937;
+  padding: 2rem;
+  border-radius: 1rem;
+  margin-bottom: 2rem;
+}
+
+.questionMeta {
+  display: flex;
+  gap: 0.75rem;
+  margin-bottom: 1.5rem;
+}
+
+.badge {
+  padding: 0.5rem 1rem;
+  background: #374151;
+  color: #9ca3af;
+  border-radius: 2rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+}
+
+.question {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: white;
+  margin: 0 0 1.5rem 0;
+  line-height: 1.4;
+}
+
+.tip {
+  padding: 1rem;
+  background: rgba(102, 126, 234, 0.1);
+  border-left: 3px solid #667eea;
+  color: #d1d5db;
+  border-radius: 0.5rem;
+}
+
+.answerSection {
+  margin-bottom: 2rem;
+}
+
+.label {
+  display: block;
+  font-weight: 600;
+  color: white;
+  margin-bottom: 0.75rem;
+  font-size: 1.125rem;
+}
+
+.textarea {
+  width: 100%;
+  padding: 1rem;
+  background: #1f2937;
+  border: 2px solid #374151;
+  border-radius: 0.75rem;
+  color: white;
+  font-size: 1rem;
+  font-family: inherit;
+  resize: vertical;
+}
+
+.textarea:focus {
+  outline: none;
+  border-color: #667eea;
+}
+
+/* Feedback */
+.scoreCircle {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 3rem auto;
+}
+
+.score {
+  font-size: 3.5rem;
+  font-weight: 900;
+  color: white;
+}
+
+.scoreLabel {
+  color: white;
+  opacity: 0.9;
+}
+
+.feedbackSection {
+  margin-bottom: 2rem;
+  padding: 1.5rem;
+  background: #1f2937;
+  border-radius: 1rem;
+}
+
+.feedbackTitle {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: white;
+  margin: 0 0 1rem 0;
+}
+
+.feedbackList {
+  margin: 0;
+  padding-left: 1.5rem;
+  color: #d1d5db;
+  line-height: 1.8;
+}
+
+.feedbackText {
+  color: #d1d5db;
+  line-height: 1.7;
+  margin: 0;
+}
+
+/* Complete */
+.completeCard {
+  text-align: center;
+  padding: 4rem 3rem;
+}
+
+.completeIcon {
+  font-size: 5rem;
+  margin-bottom: 2rem;
+}
+
+.completeTitle {
+  font-size: 2rem;
+  font-weight: 800;
+  color: white;
+  margin: 0 0 1rem 0;
+}
+
+.completeText {
+  color: #9ca3af;
+  font-size: 1.125rem;
+  margin-bottom: 2rem;
+}
+
+@media (max-width: 768px) {
+  .content {
+    padding: 2rem 1rem;
+  }
+
+  .setupCard,
+  .practiceCard,
+  .feedbackCard,
+  .completeCard {
+    padding: 2rem 1.5rem;
+  }
+
+  .buttonGroup {
+    grid-template-columns: 1fr;
+  }
+}

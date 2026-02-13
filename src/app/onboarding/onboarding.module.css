@@ -1,0 +1,341 @@
+/* src/app/onboarding/onboarding.module.css */
+.container {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #000000 0%, #1a1a1a 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.content {
+  max-width: 800px;
+  width: 100%;
+}
+
+/* Header */
+.header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.logo {
+  font-size: 2.5rem;
+  font-weight: 800;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin: 0 0 1.5rem 0;
+  letter-spacing: 2px;
+}
+
+.welcome {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: white;
+  margin: 0 0 0.5rem 0;
+}
+
+.subtitle {
+  font-size: 1.125rem;
+  color: #9ca3af;
+  margin: 0;
+}
+
+/* Progress Bar */
+.progress {
+  margin-bottom: 3rem;
+}
+
+.progressSteps {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.progressStep {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.progressCircle {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: #1f2937;
+  color: #6b7280;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 1.25rem;
+  transition: all 0.3s ease;
+}
+
+.progressStep.active .progressCircle {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+}
+
+.progressLabel {
+  font-size: 0.875rem;
+  color: #6b7280;
+  font-weight: 500;
+}
+
+.progressStep.active .progressLabel {
+  color: #667eea;
+}
+
+.progressLine {
+  width: 60px;
+  height: 2px;
+  background: #1f2937;
+}
+
+/* Form */
+.form {
+  background: linear-gradient(135deg, #111111 0%, #1a1a1a 100%);
+  border-radius: 1.5rem;
+  padding: 3rem;
+  border: 1px solid #1f2937;
+  min-height: 500px;
+}
+
+.stepContent {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.stepTitle {
+  font-size: 2rem;
+  font-weight: 800;
+  color: white;
+  margin: 0;
+  text-align: center;
+}
+
+.stepDescription {
+  color: #9ca3af;
+  text-align: center;
+  margin: 0;
+  font-size: 1.05rem;
+}
+
+/* Options Grid */
+.optionsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 1rem;
+}
+
+.optionButton {
+  padding: 1.25rem 1.5rem;
+  background: #1f2937;
+  border: 2px solid #374151;
+  border-radius: 0.75rem;
+  color: #9ca3af;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.optionButton:hover {
+  border-color: #667eea;
+  background: #1a1f2e;
+  transform: translateY(-2px);
+}
+
+.optionButton.selected {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-color: #667eea;
+  color: white;
+  box-shadow: 0 5px 15px rgba(102, 126, 234, 0.3);
+}
+
+.checkmark {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+  font-size: 1.25rem;
+}
+
+/* Input Group */
+.inputGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.label {
+  color: white;
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+.input {
+  padding: 1rem 1.25rem;
+  background: #1f2937;
+  border: 2px solid #374151;
+  border-radius: 0.75rem;
+  color: white;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.input:focus {
+  outline: none;
+  border-color: #667eea;
+  background: #1a1f2e;
+}
+
+.input::placeholder {
+  color: #6b7280;
+}
+
+/* Skills */
+.skillInput {
+  display: flex;
+  gap: 0.75rem;
+}
+
+.skillInput .input {
+  flex: 1;
+}
+
+.addButton {
+  padding: 1rem 2rem;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border: none;
+  border-radius: 0.75rem;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.addButton:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+}
+
+.skillsList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 0.5rem;
+}
+
+.skillTag {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border-radius: 2rem;
+  font-weight: 500;
+}
+
+.removeSkill {
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  font-size: 1.125rem;
+  padding: 0;
+  opacity: 0.8;
+  transition: opacity 0.3s ease;
+}
+
+.removeSkill:hover {
+  opacity: 1;
+}
+
+/* Navigation */
+.navigation {
+  display: flex;
+  gap: 1rem;
+  margin-top: 2rem;
+  justify-content: center;
+}
+
+.backButton {
+  padding: 1rem 2rem;
+  background: transparent;
+  border: 2px solid #374151;
+  border-radius: 0.75rem;
+  color: #9ca3af;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.backButton:hover {
+  border-color: #667eea;
+  color: white;
+}
+
+.nextButton {
+  padding: 1rem 3rem;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border: none;
+  border-radius: 0.75rem;
+  color: white;
+  font-weight: 700;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 5px 15px rgba(102, 126, 234, 0.3);
+}
+
+.nextButton:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(102, 126, 234, 0.5);
+}
+
+.nextButton:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .form {
+    padding: 2rem 1.5rem;
+  }
+
+  .stepTitle {
+    font-size: 1.5rem;
+  }
+
+  .optionsGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .progressSteps {
+    gap: 0.5rem;
+  }
+
+  .progressLine {
+    width: 30px;
+  }
+
+  .progressCircle {
+    width: 40px;
+    height: 40px;
+  }
+
+  .navigation {
+    flex-direction: column;
+  }
+}

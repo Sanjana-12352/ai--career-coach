@@ -1,0 +1,286 @@
+/* src/app/dashboard/cover-letter/cover-letter.module.css */
+.container {
+  min-height: 100vh;
+  background: #000000;
+}
+
+.header {
+  background: linear-gradient(135deg, #111111 0%, #1a1a1a 100%);
+  border-bottom: 1px solid #1f2937;
+  padding: 2rem;
+}
+
+.backButton {
+  display: inline-block;
+  color: #9ca3af;
+  text-decoration: none;
+  margin-bottom: 1rem;
+  transition: color 0.3s ease;
+}
+
+.backButton:hover {
+  color: #667eea;
+}
+
+.title {
+  font-size: 2rem;
+  font-weight: 800;
+  color: white;
+  margin: 0 0 0.5rem 0;
+}
+
+.subtitle {
+  color: #9ca3af;
+  margin: 0;
+  font-size: 1.125rem;
+}
+
+.content {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 3rem 2rem;
+}
+
+/* Input Card */
+.inputCard,
+.generatedCard {
+  background: linear-gradient(135deg, #111111 0%, #1a1a1a 100%);
+  border: 1px solid #1f2937;
+  border-radius: 1.5rem;
+  padding: 3rem;
+}
+
+.cardTitle {
+  font-size: 1.75rem;
+  font-weight: 800;
+  color: white;
+  margin: 0 0 2rem 0;
+  text-align: center;
+}
+
+.formGroup {
+  margin-bottom: 1.5rem;
+}
+
+.formGroup label {
+  display: block;
+  font-weight: 600;
+  color: white;
+  margin-bottom: 0.75rem;
+  font-size: 1.05rem;
+}
+
+.input,
+.textarea {
+  width: 100%;
+  padding: 1rem;
+  background: #1f2937;
+  border: 2px solid #374151;
+  border-radius: 0.75rem;
+  color: white;
+  font-size: 1rem;
+  font-family: inherit;
+  transition: border-color 0.3s ease;
+}
+
+.input:focus,
+.textarea:focus {
+  outline: none;
+  border-color: #667eea;
+}
+
+.textarea {
+  resize: vertical;
+}
+
+.hint {
+  margin-top: 0.5rem;
+  color: #9ca3af;
+  font-size: 0.9rem;
+}
+
+.toneGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+  gap: 1rem;
+}
+
+.toneButton {
+  padding: 1rem;
+  background: #1f2937;
+  border: 2px solid #374151;
+  border-radius: 0.75rem;
+  color: #9ca3af;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.toneButton:hover {
+  border-color: #667eea;
+}
+
+.toneButton.selected {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-color: #667eea;
+  color: white;
+}
+
+.primaryButton {
+  width: 100%;
+  padding: 1.25rem 2rem;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border: none;
+  border-radius: 0.75rem;
+  color: white;
+  font-weight: 700;
+  font-size: 1.125rem;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 5px 15px rgba(102, 126, 234, 0.3);
+  margin-top: 1rem;
+}
+
+.primaryButton:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(102, 126, 234, 0.5);
+}
+
+.primaryButton:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* Generated Card */
+.successHeader {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid #1f2937;
+}
+
+.successIcon {
+  font-size: 3rem;
+}
+
+.successTitle {
+  font-size: 1.75rem;
+  font-weight: 800;
+  color: white;
+  margin: 0 0 0.5rem 0;
+}
+
+.successSubtitle {
+  color: #9ca3af;
+  margin: 0;
+  font-size: 1.05rem;
+}
+
+.letterContainer {
+  background: white;
+  padding: 3rem;
+  border-radius: 1rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.letterContent {
+  color: #1f2937;
+  line-height: 1.8;
+  font-size: 1rem;
+}
+
+.paragraph {
+  margin-bottom: 1.5rem;
+  white-space: pre-wrap;
+}
+
+.paragraph:last-child {
+  margin-bottom: 0;
+}
+
+.actions {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.actionButton {
+  padding: 1rem;
+  background: #1f2937;
+  border: 2px solid #374151;
+  border-radius: 0.75rem;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.actionButton:hover {
+  border-color: #667eea;
+  background: #1a1f2e;
+  transform: translateY(-2px);
+}
+
+.editSection {
+  margin-top: 2rem;
+  padding-top: 2rem;
+  border-top: 1px solid #1f2937;
+}
+
+.editTitle {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: white;
+  margin: 0 0 1rem 0;
+}
+
+.editArea {
+  width: 100%;
+  padding: 1rem;
+  background: #1f2937;
+  border: 2px solid #374151;
+  border-radius: 0.75rem;
+  color: white;
+  font-size: 1rem;
+  font-family: 'Courier New', monospace;
+  resize: vertical;
+  line-height: 1.6;
+}
+
+.editArea:focus {
+  outline: none;
+  border-color: #667eea;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .content {
+    padding: 2rem 1rem;
+  }
+
+  .inputCard,
+  .generatedCard {
+    padding: 2rem 1.5rem;
+  }
+
+  .letterContainer {
+    padding: 2rem 1.5rem;
+  }
+
+  .actions {
+    grid-template-columns: 1fr;
+  }
+
+  .toneGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .successHeader {
+    flex-direction: column;
+    text-align: center;
+  }
+}

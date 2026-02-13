@@ -1,0 +1,251 @@
+/* src/app/dashboard/settings/settings.module.css */
+.container {
+  min-height: 100vh;
+  background: #000000;
+}
+
+.loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  color: #667eea;
+  font-size: 1.5rem;
+}
+
+.header {
+  background: linear-gradient(135deg, #111111 0%, #1a1a1a 100%);
+  border-bottom: 1px solid #1f2937;
+  padding: 2rem;
+}
+
+.backButton {
+  display: inline-block;
+  color: #9ca3af;
+  text-decoration: none;
+  margin-bottom: 1rem;
+  transition: color 0.3s ease;
+}
+
+.backButton:hover {
+  color: #667eea;
+}
+
+.title {
+  font-size: 2rem;
+  font-weight: 800;
+  color: white;
+  margin: 0;
+}
+
+.content {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 3rem 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.card {
+  background: linear-gradient(135deg, #111111 0%, #1a1a1a 100%);
+  border: 1px solid #1f2937;
+  border-radius: 1rem;
+  padding: 2rem;
+}
+
+.cardTitle {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: white;
+  margin: 0 0 1.5rem 0;
+}
+
+.cardSubtitle {
+  color: #9ca3af;
+  margin: -1rem 0 1.5rem 0;
+}
+
+.infoGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+}
+
+.infoItem label {
+  display: block;
+  font-weight: 600;
+  color: #9ca3af;
+  margin-bottom: 0.5rem;
+  font-size: 0.875rem;
+}
+
+.infoItem p {
+  color: white;
+  margin: 0;
+  font-size: 1rem;
+}
+
+.formGroup {
+  margin-bottom: 1.5rem;
+}
+
+.formGroup label {
+  display: block;
+  font-weight: 600;
+  color: white;
+  margin-bottom: 0.5rem;
+}
+
+.input,
+.select {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  background: #1f2937;
+  border: 2px solid #374151;
+  border-radius: 0.5rem;
+  color: white;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+}
+
+.input:focus,
+.select:focus {
+  outline: none;
+  border-color: #667eea;
+}
+
+.skillInputGroup {
+  display: flex;
+  gap: 0.75rem;
+}
+
+.skillInputGroup .input {
+  flex: 1;
+}
+
+.addButton {
+  padding: 0.75rem 1.5rem;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border: none;
+  border-radius: 0.5rem;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.addButton:hover {
+  transform: translateY(-2px);
+}
+
+.skillsList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 1rem;
+}
+
+.skillTag {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border-radius: 2rem;
+  font-weight: 500;
+}
+
+.removeSkill {
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  padding: 0;
+  font-size: 1.125rem;
+  opacity: 0.8;
+  transition: opacity 0.3s ease;
+}
+
+.removeSkill:hover {
+  opacity: 1;
+}
+
+.goalsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 1rem;
+}
+
+.goalButton {
+  padding: 1rem 1.5rem;
+  background: #1f2937;
+  border: 2px solid #374151;
+  border-radius: 0.75rem;
+  color: #9ca3af;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.goalButton:hover {
+  border-color: #667eea;
+  background: #1a1f2e;
+}
+
+.goalButton.selected {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-color: #667eea;
+  color: white;
+}
+
+.checkmark {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+  font-size: 1.25rem;
+}
+
+.saveSection {
+  display: flex;
+  justify-content: center;
+}
+
+.saveButton {
+  padding: 1rem 3rem;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border: none;
+  border-radius: 0.5rem;
+  color: white;
+  font-weight: 700;
+  font-size: 1.125rem;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 5px 15px rgba(102, 126, 234, 0.3);
+}
+
+.saveButton:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(102, 126, 234, 0.5);
+}
+
+.saveButton:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+@media (max-width: 768px) {
+  .content {
+    padding: 2rem 1rem;
+  }
+
+  .goalsGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .infoGrid {
+    grid-template-columns: 1fr;
+  }
+}

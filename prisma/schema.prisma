@@ -1,0 +1,96 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+// User model
+model User {
+  id                String   @id @default(uuid())
+  clerkId          String   @unique
+  email            String   @unique
+  firstName        String?
+  lastName         String?
+  imageUrl         String?
+  
+  // Onboarding data
+  industry         String?
+  currentRole      String?
+  experienceLevel  String?
+  careerGoals      String[] // Array of goals
+  skills           String[] // Array of skills
+  onboardingComplete Boolean @default(false)
+  
+  // Relations
+  careerSessions    CareerSession[]
+  interviewSessions InterviewSession[]
+  resumes          Resume[]
+  coverLetters     CoverLetter[]
+  
+  createdAt        DateTime @default(now())
+  updatedAt        DateTime @updatedAt
+}
+
+// Career guidance chat sessions
+model CareerSession {
+  id        String   @id @default(uuid())
+  userId    String
+  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  
+  messages  Json     // Store conversation as JSON
+  
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+// Interview practice sessions
+model InterviewSession {
+  id          String   @id @default(uuid())
+  userId      String
+  user        User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  
+  question    String
+  userAnswer  String
+  aiFeedback  String
+  score       Int?
+  strengths   String[] // Array of strengths
+  improvements String[] // Array of improvements
+  
+  category    String?  // Behavioral, Technical, etc.
+  difficulty  String?  // Easy, Medium, Hard
+  
+  createdAt   DateTime @default(now())
+}
+
+// Resumes
+model Resume {
+  id          String   @id @default(uuid())
+  userId      String
+  user        User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  
+  title       String
+  targetRole  String
+  content     Json     // Store resume data as JSON
+  atsScore    Int?
+  
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+}
+
+// Cover letters
+model CoverLetter {
+  id          String   @id @default(uuid())
+  userId      String
+  user        User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  
+  jobTitle    String
+  company     String
+  content     String   @db.Text
+  tone        String?
+  
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+}
