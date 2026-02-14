@@ -182,7 +182,7 @@ export default function CoverLetterPage() {
                   });
                 }}
               >
-                ✨ Generate Another
+                 Generate Another
               </button>
             </div>
 
@@ -195,7 +195,7 @@ export default function CoverLetterPage() {
                 onChange={(e) => setCoverLetter(e.target.value)}
               />
               <div className={styles.hint}>
-                💡 Feel free to customize the letter above
+                 Feel free to customize the letter above
               </div>
             </div>
           </div>

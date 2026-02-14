@@ -156,7 +156,7 @@ export default function ResumeBuilderPage() {
                   <input
                     type="text"
                     className={styles.input}
-                    placeholder="John Doe"
+                    placeholder="Sanjana"
                     value={resumeData.personalInfo.fullName}
                     onChange={(e) => setResumeData({
                       ...resumeData,
@@ -170,7 +170,7 @@ export default function ResumeBuilderPage() {
                   <input
                     type="email"
                     className={styles.input}
-                    placeholder="john@example.com"
+                    placeholder="sanjana@gmail.com"
                     value={resumeData.personalInfo.email}
                     onChange={(e) => setResumeData({
                       ...resumeData,
@@ -184,7 +184,7 @@ export default function ResumeBuilderPage() {
                   <input
                     type="tel"
                     className={styles.input}
-                    placeholder="+1 234 567 8900"
+                    placeholder="+91 9502245756"
                     value={resumeData.personalInfo.phone}
                     onChange={(e) => setResumeData({
                       ...resumeData,
