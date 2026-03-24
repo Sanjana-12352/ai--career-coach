@@ -289,7 +289,7 @@ export default function Home() {
           </div>
           <div className={styles.footerLinks}>
             <p className={styles.footerCopyright}>
-              © 2026 SENSAI. All rights reserved. Built with ❤️ for career success.
+              © 2026 SENSAI. All rights reserved. Built with ❤️ by Sanjana Reddy Duvvuri for career success.
             </p>
           </div>
         </div>
